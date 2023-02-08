@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Append Emoji Description",
+  "version": "0.1",
+  "description": "This extension appends emoji description to chat messages",
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://chat.google.com/*",
+        "https://mail.google.com/chat/*"
+      ]
+    }
+  ]
+}
