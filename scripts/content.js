@@ -26,6 +26,7 @@ getEmojiDescription = (emojiHtml) => {
     '🫤': 'rosto com boca diagonal',
     '❤️': 'coração',
     '➕': 'símbolo de adição',
+    '🏖️': 'água, areia e sombrinha',
   };
 
   const description = descriptions[value];
