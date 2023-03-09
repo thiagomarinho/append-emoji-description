@@ -1914,8 +1914,14 @@ getEmojiDescription = (emojiHtml) => {
 }
 
 // TODO: can we use this while writing emails?
-document.addEventListener("input", function(event) {
+document.addEventListener("input", async function(event) {
   if (event.inputType == 'deleteContentBackward') {
+    return;
+  }
+
+  const isAppenderEnabled = await chrome.runtime.sendMessage('get-appender-status');
+
+  if (!isAppenderEnabled) {
     return;
   }
 

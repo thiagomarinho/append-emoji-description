@@ -3,6 +3,18 @@
   "name": "Append Emoji Description",
   "version": "0.1",
   "description": "This extension appends emoji description to chat messages",
+  "action": {
+    "default_icon": {
+      "16": "images/off.png",
+      "24": "images/off.png",
+      "32": "images/off.png"
+    },
+    "default_title": "Toggle emoji description appender"
+  },
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
   "content_scripts": [
     {
       "all_frames": true,
